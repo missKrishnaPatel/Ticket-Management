@@ -32,7 +32,7 @@ const Dashboard = () => {
         }
 
         const res = await axios.get(
-          `http://localhost:5000/api/tickets/my-tickets`,
+          `https://ticket-managementser.onrender.com/api/tickets/my-tickets`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
