@@ -14,8 +14,11 @@ connectdB();
 
 
 app.use(cors({
-  origin: "http://localhost:3000", // Allow frontend origin
-  credentials: true, // Allow cookies or auth headers if needed
+  origin: [
+    'http://localhost:3000', // for local dev
+    'https://ticket-management-frontend-ob8p.onrender.com' // ✅ production frontend
+  ],
+  credentials: true
 }));
 app.use(express.json());
 app.use(express.json());
