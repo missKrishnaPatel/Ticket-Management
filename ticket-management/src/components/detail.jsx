@@ -32,7 +32,7 @@ const Dashboard = () => {
         }
          console.log("details.........");
         const res = await axios.get(
-          `http://localhost:5000/api/tickets/my-tickets`,
+          `https://ticket-management-backend-z7nf.onrender.com/api/tickets/my-tickets`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -66,7 +66,7 @@ const Dashboard = () => {
       }
 
       await axios.delete(
-        `http://localhost:5000/api/tickets/${ticketId}`,
+        `https://ticket-management-backend-z7nf.onrender.com/api/tickets/${ticketId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
