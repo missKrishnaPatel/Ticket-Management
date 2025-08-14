@@ -16,7 +16,7 @@ import axios from 'axios';
 // import { API_BASE_URL } from '../utils/api.js';
 
 const Dashboard = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [allTickets, setAllTickets] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
@@ -31,8 +31,9 @@ const Dashboard = () => {
           return;
         }
 
+        console.log("client start .....");
         const res = await axios.get(
-          `https://ticket-managementser.onrender.com/api/tickets/my-tickets`,
+          `http://localhost:5000/api/tickets/my-tickets`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -66,7 +67,7 @@ const Dashboard = () => {
       }
 
       await axios.delete(
-        `https://ticket-managementser.onrender.com/api/tickets/${ticketId}`,
+        `http://localhost:5000/api/tickets/${ticketId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

@@ -31,7 +31,7 @@ const History = () => {
 
     const fetchTickets = async () => {
       try {
-        const response = await axios.get(`https://ticket-managementser.onrender.com/api/tickets`, {
+        const response = await axios.get(`http://localhost:5000/api/tickets`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

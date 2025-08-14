@@ -13,7 +13,7 @@ import {
   CircularProgress,
 } from '@mui/material';
 import axios from 'axios';
-import { API_BASE_URL } from '../utils/api.js';
+// import { API_BASE_URL } from '../utils/api.js';
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -30,9 +30,9 @@ const Dashboard = () => {
           setError('You must be logged in to view tickets.');
           return;
         }
-
+         console.log("details.........");
         const res = await axios.get(
-          `${API_BASE_URL}/tickets/my-tickets`,
+          `http://localhost:5000/api/tickets/my-tickets`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -66,7 +66,7 @@ const Dashboard = () => {
       }
 
       await axios.delete(
-        `${API_BASE_URL}/tickets/${ticketId}`,
+        `http://localhost:5000/api/tickets/${ticketId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
