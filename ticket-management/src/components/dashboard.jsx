@@ -66,7 +66,7 @@ const Dashboard = () => {
       }
 
       await axios.delete(
-        `http://localhost:5000/api/tickets/${ticketId}`,
+        `https://ticket-managementser.onrender.com/api/tickets/${ticketId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
